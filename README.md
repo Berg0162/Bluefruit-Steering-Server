@@ -50,7 +50,7 @@ To ensure **interoperability**, the library implements a known **BLE Steering Pr
 ## 🧱 Dependencies
 
 + [Adafruit nRF52 Arduino Core](https://github.com/adafruit/Adafruit_nRF52_Arduino)
-+ [Adafruit Bluefruit Library (BLE Peripheral)](https://github.com/adafruit/Adafruit_BluefruitLE_nRF51)
++ [Adafruit Bluefruit Library (Source)](https://github.com/adafruit/Adafruit_nRF52_Arduino/tree/master/libraries/Bluefruit52Lib)
 
 > 💡 This library is built specifically for **Adafruit's Bluefruit platform**, and is not compatible with NimBLE-based ESP32 boards.
 
