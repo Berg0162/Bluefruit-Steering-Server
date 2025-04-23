@@ -1,4 +1,4 @@
-# Open Virtual Steering with BLESteeringServer
+# Open Virtual Steering with BluefruitSteeringServer
 The **Romans** knew it already **`"Sterzare Necesse Est"`** (free after Plutarch) and it is still valid in a **virtual cycling world**.<br>
 <details><summary>What is means</summary>
     
@@ -11,9 +11,13 @@ It provides examples of alternative input methods for **navigating and positioni
 
 ## 📦 What Is This?
 
-**BLESteeringServer** is an open-source, Arduino-compatible C++ library that provides a **reusable Bluetooth Low Energy (BLE) server** implementation for transmitting **steering data** to virtual cycling platforms.
+**BluefruitSteeringServer** is an Arduino-compatible C++ library that provides a ready-to-use **BLE server implementation** for **steering control in virtual cycling platforms**, built specifically for the **Adafruit Bluefruit (nRF52) ecosystem**.
 
-It is designed as a **shared backend** for projects in the **Open Virtual Steering** ecosystem and supports pairing with BLE clients that recognize a known **steering profile** used in commercial platforms.
+It is the **nRF52/Bluefruit sibling** of the [BLESteeringServer](https://github.com/Berg0162/BLESteeringServer) library, and is designed to serve as the BLE communication layer for applications using **alternative Human Interface Devices (HIDs)** — such as buttons, joysticks, motion sensors, or voice input.
+
+The library handles BLE advertisement, pairing, and the transmission of **steering angle data** using a known **steering profile**, enabling smooth integration with virtual cycling clients that support BLE steering controllers.
+
+It is used as a backend in projects focused on HID-based steering control.
 
 ![Open Virtual Steering Diagram](/media/OpenVirtualSteering_Overview.png)
 
@@ -28,11 +32,11 @@ This project allows users to explore these input devices for the **use case of s
 
 ## 🔧 How the code works
 
-With the **BLESteeringServer** library installed, developers can easily create applications that act as **dedicated BLE steering controllers** for use with **virtual cycling platforms**.
+With the **BluefruitSteeringServer** library installed, developers can easily create applications that act as **dedicated BLE steering controllers** for use with **virtual cycling platforms**.
 
-The user application is responsible for interfacing with a **Human Interface Device (HID)** — such as buttons, a joystick, an IMU, or voice input — and regularly passing steering data to the BLESteeringServer.
+The user application is responsible for interfacing with a **Human Interface Device (HID)** — such as buttons, a joystick, an IMU, or voice input — and regularly passing steering data to the BluefruitSteeringServer.
 
-Once paired with a BLE client, the application uses `BLESteeringServer::updateSteeringValue()` to transmit real-time **steering angle data** over Bluetooth.
+Once paired with a BLE client, the application uses `BluefruitSteeringServer::updateSteeringValue()` to transmit real-time **steering angle data** over Bluetooth.
 
 To ensure **interoperability**, the library implements a known **BLE Steering Profile**, which defines a consistent structure of services and characteristics used in commercial BLE steering devices. BLE profiles serve as an **application-layer contract** between the controller (peripheral) and the receiving client (central), ensuring compatibility across devices and platforms.
 
@@ -45,16 +49,23 @@ To ensure **interoperability**, the library implements a known **BLE Steering Pr
 
 ## 🧱 Dependencies
 
-+ [Arduino core for ESP32](https://github.com/espressif/arduino-esp32)
-+ [NimBLE-Arduino version 2.x](https://github.com/h2zero/NimBLE-Arduino)
++ [Adafruit nRF52 Arduino Core](https://github.com/adafruit/Adafruit_nRF52_Arduino)
++ [Adafruit Bluefruit Library (BLE Peripheral)](https://github.com/adafruit/Adafruit_BluefruitLE_nRF51)
 
-+ **Supported MCU's** with **NimBLE-Arduino**
-    - Espressif: ESP32, ESP32C3, ESP32S3
-    - Nordic: nRF51, nRF52 series (**Requires** using [n-able arduino core](https://github.com/h2zero/n-able-Arduino))
+> 💡 This library is built specifically for **Adafruit's Bluefruit platform**, and is not compatible with NimBLE-based ESP32 boards.
+
+### **Supported MCU Boards**
++ Nordic Semiconductor **nRF52 series**
+  - 🟢 Adafruit Feather nRF52840 Express
+  - 🟢 Adafruit ItsyBitsy nRF52840
+  - 🟢 Adafruit CLUE, Bluefruit Sense, and other nRF52 boards with BLE support
+
+To install the core:
+- Follow Adafruit's guide: [Install Adafruit nRF52 Arduino Core](https://learn.adafruit.com/bluefruit-nrf52-feather-learning-guide/arduino-bsp-setup)
 
 ## 🚴‍♂️ Quick start?
 
-+ Install the **BLESteeringServer library** from this repository. Download as `.zip` and extract to `Arduino/libraries` folder, or <br>in <b>Arduino IDE</b> from `Sketch menu` -> `Include library` -> `Add .Zip library`<br>
++ Install the **BluefruitSteeringServer library** from this repository. Download as `.zip` and extract to `Arduino/libraries` folder, or <br>in <b>Arduino IDE</b> from `Sketch menu` -> `Include library` -> `Add .Zip library`<br>
 + Select one of the _**Related Repositories**_ that apply this **shared backend** and offer you **ready-to-use exemplary access** to a selection of different **Human-Interface-Devices**.
 
 ## ⚠️ Disclaimer
@@ -72,20 +83,20 @@ If you are a <b>rights holder</b> and believe that this project includes content
 </details>
 
 ## 🧪 Testing & Validation
-The functionality of **Open Virtual Steering with BLESteeringServer** was tested using **standard BLE debugging tools** to ensure proper communication and responsiveness. One of the primary tools used was **nRF Connect for Mobile**, a widely available application for **scanning, connecting, and interacting with BLE devices**. This allowed for **verification of characteristic read/write operations, response timing, and general stability** of the BLE communication.  
+The functionality of **Open Virtual Steering with BluefruitSteeringServer** was tested using **standard BLE debugging tools** to ensure proper communication and responsiveness. One of the primary tools used was **nRF Connect for Mobile**, a widely available application for **scanning, connecting, and interacting with BLE devices**. This allowed for **verification of characteristic read/write operations, response timing, and general stability** of the BLE communication.  
 
 ## 🔧 Basic Usage
 
 ```cpp
-#include <BLESteeringServer.h>
+#include <BluefruitSteeringServer.h>
 
 void setup() {
-    BLESteeringServer::getInstance().begin();
+    BluefruitSteeringServer::getInstance().begin();
 }
 
 void loop() {
     float angle = getSteeringAngleFromHID();
-    BLESteeringServer::getInstance().updateSteeringValue(angle);
+    BluefruitSteeringServer::getInstance().updateSteeringValue(angle);
 }
 ```
 ---
