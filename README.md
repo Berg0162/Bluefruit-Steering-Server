@@ -6,7 +6,7 @@ The original quote **Navigare Necesse Est** ("Navigation is Necessary"), was hum
 
 </details>
 
-**Open Virtual Steering** is an open-source project that explores interfacing with various **Human-Interface-Devices (HID)** for the **use case of steering control** in **virtual cycling platforms**.
+**Open Virtual Steering (OVS)** is an open-source project that explores interfacing with various **Human-Interface-Devices (HID)** for the **use case of steering control** in **virtual cycling platforms**.
 It provides examples of alternative input methods for **navigating and positioning a cycling avatar** in a virtual world. 
 
 ## 📦 What Is This?
@@ -21,14 +21,16 @@ It is used as a backend in projects focused on HID-based steering control.
 
 ![Open Virtual Steering Diagram](/media/OpenVirtualSteering_Overview.png)
 
-## 📚 Related Repositories
-This project allows users to explore these input devices for the **use case of steering control** in **virtual cycling worlds**. The project focus is on **enhancing interactivity and user experience** through **obvious and innovative** control methods. <br>
+## 📚 Related OVS Repositories
 
-| Repository | HID Focus |
-|-----------|-----------|
-| [`OpenVirtualSteering-DiscreteHIDs`](https://github.com/Berg0162/OpenVirtualSteering-DiscreteHIDs) | Buttons, Joysticks, Rotary Encoders |
-| [`OpenVirtualSteering-MotionIMU`](https://github.com/Berg0162/OpenVirtualSteering-MotionIMU)     | Tilt & lean-based steering with MPU6050 |
-| [`OpenVirtualSteering-VoiceControl`](https://github.com/Berg0162/OpenVirtualSteering-VoiceControl) | Voice-activated steering with TinyML |
+This project allows users to explore a range of input devices for **steering control in virtual cycling worlds**. The emphasis is on **enhancing interactivity and user experience** through both **accessible** and **innovative** control methods.
+
+| HID Focus | Bluefruit Repository | NimBLE Repository |
+|-----------|-------------------|----------------------|
+| Buttons, Joysticks, Rotary Encoders | [`OVS-DiscreteHIDs-Bluefruit`](https://github.com/Berg0162/OpenVirtualSteering-DiscreteHID-Bluefruit) | [`OVS-DiscreteHIDs`](https://github.com/Berg0162/OpenVirtualSteering-DiscreteHID) | 
+| Tilt & lean-based steering with MPU6050 | [`OVS-MotionIMU-Bluefruit`](https://github.com/Berg0162/OpenVirtualSteering-MotionIMU-Bluefruit) | [`OVS-MotionIMU`](https://github.com/Berg0162/OpenVirtualSteering-MotionIMU) |
+| Voice-activated steering with TinyML | ℹ️ | [`OVS-VoiceControl`](https://github.com/Berg0162/OpenVirtualSteering-VoiceControl) | 
+> ℹ️ The **VoiceControl** project is tightly coupled to the **XIAO ESP32S3 Sense**, which includes a built-in microphone and supports only **NimBLE (ESP32)**. A Bluefruit version is not applicable.
 
 ## 🔧 How the code works
 
