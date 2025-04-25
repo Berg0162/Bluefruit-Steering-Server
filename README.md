@@ -27,9 +27,9 @@ This project allows users to explore a range of input devices for **steering con
 
 | HID Focus | Bluefruit Repository | NimBLE Repository |
 |-----------|-------------------|----------------------|
-| Buttons, Joysticks, Rotary Encoders | [`OVS-DiscreteHIDs-Bluefruit`](https://github.com/Berg0162/OpenVirtualSteering-DiscreteHID-Bluefruit) | [`OVS-DiscreteHIDs`](https://github.com/Berg0162/OpenVirtualSteering-DiscreteHID) | 
-| Tilt & lean-based steering with MPU6050 | [`OVS-MotionIMU-Bluefruit`](https://github.com/Berg0162/OpenVirtualSteering-MotionIMU-Bluefruit) | [`OVS-MotionIMU`](https://github.com/Berg0162/OpenVirtualSteering-MotionIMU) |
-| Voice-activated steering with TinyML | ℹ️ | [`OVS-VoiceControl`](https://github.com/Berg0162/OpenVirtualSteering-VoiceControl) | 
+| Buttons, Joysticks, Rotary Encoders | [`OVS-DiscreteHIDs-Bluefruit`](https://github.com/Berg0162/Open-Virtual-Steering-DiscreteHID-Bluefruit) | [`OVS-DiscreteHIDs`](https://github.com/Berg0162/Open-Virtual-Steering-DiscreteHID) | 
+| Tilt & lean-based steering with MPU6050 | [`OVS-MotionIMU-Bluefruit`](https://github.com/Berg0162/Open-Virtual-Steering-MotionIMU-Bluefruit) | [`OVS-MotionIMU`](https://github.com/Berg0162/Open-Virtual-Steering-MotionIMU) |
+| Voice-activated steering with TinyML | ℹ️ | [`OVS-VoiceControl`](https://github.com/Berg0162/Open-Virtual-Steering-VoiceControl) | 
 > ℹ️ The **VoiceControl** project is tightly coupled to the **XIAO ESP32S3 Sense**, which includes a built-in microphone and supports only **NimBLE (ESP32)**. A Bluefruit version is not applicable.
 
 ## 🔧 How the code works
