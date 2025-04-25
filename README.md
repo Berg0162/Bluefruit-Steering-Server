@@ -13,7 +13,7 @@ It provides examples of alternative input methods for **navigating and positioni
 
 **BluefruitSteeringServer** is an Arduino-compatible C++ library that provides a ready-to-use **BLE server implementation** for **steering control in virtual cycling platforms**, built specifically for the **Adafruit Bluefruit (nRF52) ecosystem**.
 
-It is the **nRF52/Bluefruit sibling** of the [BLESteeringServer](https://github.com/Berg0162/BLESteeringServer) library, and is designed to serve as the BLE communication layer for applications using **alternative Human Interface Devices (HIDs)** — such as buttons, joysticks, motion sensors, or voice input.
+It is the **nRF52/Bluefruit sibling** of the [BLESteeringServer](https://github.com/Berg0162/BLE-Steering-Server) library, and is designed to serve as the BLE communication layer for applications using **alternative Human Interface Devices (HIDs)** — such as buttons, joysticks, motion sensors, or voice input.
 
 The library handles BLE advertisement, pairing, and the transmission of **steering angle data** using a known **steering profile**, enabling smooth integration with virtual cycling clients that support BLE steering controllers.
 
