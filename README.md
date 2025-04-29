@@ -1,4 +1,4 @@
-# Open Virtual Steering with BluefruitSteeringServer
+# <img src="/media/ESP32_Icon.png" width="119" height="103" align="bottom" alt="Bluefruit Icon"> Open Virtual Steering with BluefruitSteeringServer
 The **Romans** knew it already **`"Sterzare Necesse Est"`** (free after Plutarch) and it is still valid in a **virtual cycling world**.<br>
 <details><summary>What is means</summary>
     
