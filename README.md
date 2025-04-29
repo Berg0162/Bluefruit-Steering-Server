@@ -1,4 +1,4 @@
-# <img src="/media/bluefruit_Icon.png" width="100" height="80" align="bottom" alt="Bluefruit Icon"> Open Virtual Steering with BluefruitSteeringServer
+# <img src="/media/Nordic_Icon.png" width="53" height="50" align="bottom" alt="Nordic Icon"> Open Virtual Steering with BluefruitSteeringServer
 The **Romans** knew it already **`"Sterzare Necesse Est"`** (free after Plutarch) and it is still valid in a **virtual cycling world**.<br>
 <details><summary>What is means</summary>
     
