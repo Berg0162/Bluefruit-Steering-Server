@@ -32,6 +32,14 @@ This project allows users to explore a range of input devices for **steering con
 | Voice-activated steering with TinyML | ℹ️ | [`OVS-VoiceControl`](https://github.com/Berg0162/Open-Virtual-Steering-VoiceControl) | 
 > ℹ️ The **VoiceControl** project is tightly coupled to the **XIAO ESP32S3 Sense**, which includes a built-in microphone and supports only **NimBLE (ESP32)**. A Bluefruit version is not applicable.
 
+## ❓ What is Bluefruit?
+
+**Bluefruit** is Adafruit's branding for its line of development boards and firmware built around **Nordic Semiconductor's nRF52 family** of Bluetooth Low Energy (BLE) chips.
+
+Bluefruit boards run on the ARM Cortex-M4F processors and support BLE peripheral mode via the **Adafruit Bluefruit Arduino Core**. These boards are widely used for wireless sensor, controller, and wearable projects due to their low power consumption, built-in Bluetooth stack, and Arduino compatibility.
+
+This repository provides code that specifically targets **Adafruit's Bluefruit stack**, using their `Bluefruit.begin()`, `BLEService`, and `BLECharacteristic` APIs — separate from ESP32 or NimBLE-based implementations.
+
 ## 🔧 How the code works
 
 With the **BluefruitSteeringServer** library installed, developers can easily create applications that act as **dedicated BLE steering controllers** for use with **virtual cycling platforms**.
