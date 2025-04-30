@@ -36,8 +36,6 @@ This project allows users to explore a range of input devices for **steering con
 
 **Bluefruit** is Adafruit's branding for its line of development boards and firmware built around **Nordic Semiconductor's nRF52 family** of Bluetooth Low Energy (BLE) chips.
 
-Bluefruit boards run on the ARM Cortex-M4F processors and support BLE peripheral mode via the **Adafruit Bluefruit Arduino Core**. These boards are widely used for wireless sensor, controller, and wearable projects due to their low power consumption, built-in Bluetooth stack, and Arduino compatibility.
-
 This repository provides code that specifically targets **Adafruit's Bluefruit stack**, using their `Bluefruit.begin()`, `BLEService`, and `BLECharacteristic` APIs — separate from ESP32 or NimBLE-based implementations.
 
 ## 🔧 How the code works
