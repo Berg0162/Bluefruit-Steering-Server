@@ -36,7 +36,7 @@ This project allows users to explore a range of input devices for **steering con
 
 **Bluefruit** is Adafruit's branding for its line of development boards and firmware built around **Nordic Semiconductor's nRF52 family** of Bluetooth Low Energy (BLE) chips.
 
-This repository provides code that specifically targets **Adafruit's Bluefruit stack**, using their `Bluefruit.begin()`, `BLEService`, and `BLECharacteristic` APIs — separate from [ESP-Bluedroid](https://github.com/Berg0162/BLE-Steering-Server) or [ESP-NimBLE](https://github.com/Berg0162/NimBLE-Steering-Server) implementations.
+This **OVS**-repository provides code that specifically targets **Adafruit's Bluefruit stack**, using their `Bluefruit.begin()`, `BLEService`, and `BLECharacteristic` APIs — separate from [ESP-Bluedroid](https://github.com/Berg0162/BLE-Steering-Server) or [ESP-NimBLE](https://github.com/Berg0162/NimBLE-Steering-Server) **OVS**-implementations.
 
 ## 🔧 How the code works
 
