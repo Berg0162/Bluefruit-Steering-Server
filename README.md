@@ -38,6 +38,9 @@ This project allows users to explore a range of input devices for **steering con
 
 This **OVS**-repository provides code that specifically targets **Adafruit's Bluefruit stack**, using their `Bluefruit.begin()`, `BLEService`, and `BLECharacteristic` APIs — separate from [ESP-Bluedroid](https://github.com/Berg0162/BLE-Steering-Server) or [ESP-NimBLE](https://github.com/Berg0162/NimBLE-Steering-Server) **OVS**-implementations.
 
++ API Reference
+    + [bluefruit-nrf52-api](https://learn.adafruit.com/introducing-the-adafruit-nrf52840-feather/bluefruit-nrf52-api)
+
 ## 🔧 How the code works
 
 With the **BluefruitSteeringServer** library installed, developers can easily create applications that act as **dedicated BLE steering controllers** for use with **virtual cycling platforms**.
