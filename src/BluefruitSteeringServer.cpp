@@ -157,12 +157,13 @@ void BluefruitSteeringServer::SteeringRxChar_callback(uint16_t conn_hdl, BLEChar
   DEBUG_PRINTLN("]"); 
 };
 
-void BluefruitSteeringServer::PrintPeerAddress(uint8_t addr[6]) {
-  for (int i = 1; i < 6; i++) {
-      // Display byte by byte in HEX reverse: little Endian
-      DEBUG_PRINTF("%02X:",addr[(6-i)], HEX);
-  }
-   DEBUG_PRINTF("%02X ",addr[0], HEX);
+// Uppercase alternative to Address <string>
+String BluefruitSteeringServer::toString(uint8_t macAddress[6]) {
+  char stringMAC[18]; // 6*2 bytes + 5 colons + 1 null terminator = 18
+  // Undo Little Endian machine-representation
+  snprintf(stringMAC, sizeof(stringMAC), "%02X:%02X:%02X:%02X:%02X:%02X", macAddress[5], macAddress[4], \
+           macAddress[3], macAddress[2], macAddress[1], macAddress[0]); // byte by byte in HEX --> UPPERCASE
+  return String(stringMAC);
 }
 
 void BluefruitSteeringServer::cccd_callback(uint16_t conn_handle, BLECharacteristic* chr, uint16_t cccd_value) {
@@ -205,9 +206,9 @@ void BluefruitSteeringServer::connect_callback(uint16_t conn_handle) {
   connection->getPeerName(client_name, sizeof(client_name));
   ble_gap_addr_t peer_address = connection->getPeerAddr();
   memcpy(client_addr, peer_address.addr, 6);
-  DEBUG_PRINTF("Server connected to Client: %s conn handle [%d] MAC Address: ", client_name, conn_handle);
-  BluefruitSteeringServer::getInstance().PrintPeerAddress(client_addr);
-  DEBUG_PRINTLN();
+  String full_addr = BluefruitSteeringServer::getInstance().toString(client_addr);
+  DEBUG_PRINTF("Server connected to Client: %s conn handle [%d] MAC Address: [%s]\n", \
+								client_name, conn_handle, full_addr.c_str());
 #endif 
   BluefruitSteeringServer::getInstance().isConnected = true;
 }

@@ -25,7 +25,7 @@ private:
     BLEService BatteryService;
     BLECharacteristic BatteryChar;  //notify
 
-    void PrintPeerAddress(uint8_t addr[6]);
+    String toString(uint8_t macAddress[6]);
     float constrainSteerAngle(float angle);
 
     void static connect_callback(uint16_t conn_handle) ;
