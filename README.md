@@ -55,7 +55,7 @@ The user application is responsible for interfacing with a **Human Interface Dev
 
 Once paired with a BLE client, the application uses `BluefruitSteeringServer::updateSteeringValue()` to transmit real-time **steering angle data** over Bluetooth.
 
-To ensure **interoperability**, the library implements a known **BLE Steering Profile**, which defines a consistent structure of services and characteristics used in commercial BLE steering devices. BLE profiles serve as an **application-layer contract** between the controller (peripheral) and the receiving client (central), ensuring compatibility across devices and platforms.
+To ensure **interoperability**, the library implements a known **BLE Steering Profile**, which defines a consistent structure of services and characteristics used in commercial BLE steering devices. BLE profiles serve as an **application-layer contract** between the server (peripheral) and the receiving client (central), ensuring compatibility across devices and platforms.
 
 <details>
 <summary>🔍 More Info</summary>
